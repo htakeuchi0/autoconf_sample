@@ -1,5 +1,16 @@
+/**
+ * メインメソッドをもつソースファイル．
+ */
+
 #include "include/example.hpp"
 
+/**
+ * メインメソッド
+ *
+ * @param[in] argc コマンドライン引数の数
+ * @param[in] argv コマンドライン引数
+ * @return int 終了コード
+ */
 int main(int argc, char **argv) {
     if (argc < 3) {
         std::cerr << "Usage: example <name> <value> <value2>\n";
