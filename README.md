@@ -1,8 +1,18 @@
-# C++サンプル
+# C++サンプルプロジェクト
 
 ## 概要
 
-GoogleTestの導入．
+C++のサンプルプロジェクト．    
+Google Test の使用例を含む．
+
+
+動作環境は以下のとおりである．
+* OS: Linux (Ubuntu 18.04.3 LTS)
+* コンパイラ: g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+
+## 環境構築
+
+以下のコマンドで Google Test を導入できる．
 
 ```
 $ source makeenv.sh
@@ -10,8 +20,11 @@ $ source makeenv.sh
 
 ## ディレクトリ構成
 
+`makeenv.sh`を実行する前のディレクトリ構成は以下の通り．
+
 ```
 |- cpp_sample/
+   |- Doxyfile               - doxygen設定ファイル
    |- Makefile               - makeファイル
    |- README.md              - 本ファイル
    |- makeenv.sh             - 環境構築用スクリプト
@@ -57,5 +70,14 @@ Running main() from /home/hiroshi/Documents/cpp/cpp_sample/googletest-release-1.
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
+```
+
+## Doxygenの生成
+
+以下のコマンドでhtmlファイルが生成できる．    
+`doxygen/html/index.html`をブラウザで開いて読める．
+
+```
+$ doxygen
 ```
 

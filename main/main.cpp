@@ -1,5 +1,6 @@
 /**
- * メインメソッドをもつソースファイル．
+ * @file main.cpp
+ * @brief メインメソッドをもつソースファイル．
  */
 
 #include "include/example.hpp"

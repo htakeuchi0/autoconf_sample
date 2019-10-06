@@ -1,3 +1,8 @@
+/**
+ * @file gtest_example.cpp
+ * @brief テストファイル．
+ */
+
 #include "gtest/gtest.h"
 #include "include/example.hpp"
 

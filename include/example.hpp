@@ -1,5 +1,6 @@
 /**
- * サンプルクラスをもつヘッダファイル．
+ * @file example.hpp
+ * @brief サンプルクラスをもつヘッダファイル．
  */
 
 #ifndef CPP_SAMPLE_EXAMPLE_H_
@@ -8,6 +9,9 @@
 #include <iostream>
 #include <string>
 
+/**
+ * サンプル名前空間
+ */
 namespace example {
 
 /**
@@ -17,8 +21,8 @@ class Example {
 public:
     /**
      * コンストラクタ．
-     * @param[in] name 名前
-     * @param[in] value 値
+     * @param name 名前
+     * @param value 値
      */
     Example(std::string name, int value);
 
@@ -29,31 +33,31 @@ public:
 
     /**
      * 名前を返す．
-     * @return std::string 名前
+     * @return 名前
      */
     std::string Name() const;
 
     /**
      * 値を返す．
-     * @return int 値
+     * @return 値
      */
     int Value() const;
 
     /**
      * 名前を設定する．
-     * @param[in] name 名前
+     * @param name 名前
      */
     void SetName(std::string name);
 
     /**
      * 値を設定する．
-     * @param[in] value 値
+     * @param value 値
      */
     void SetValue(int value);
     
     /**
      * 値を加える．
-     * @param[in] rhs 加算する値
+     * @param rhs 加算する値
      */
     void AddValue(int rhs);
 
