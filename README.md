@@ -12,6 +12,7 @@ $ source makeenv.sh
 
 ```
 |- cpp_sample/
+   |- Makefile               - makeファイル
    |- README.md              - 本ファイル
    |- makeenv.sh             - 環境構築用スクリプト
    |- include/               - ヘッダファイル
@@ -29,7 +30,8 @@ $ source makeenv.sh
 
 ## コンパイルと実行
 
-メインプログラムのコンパイルと実行．
+メインプログラムのコンパイルと実行．    
+`make build` でもよい．
 
 ```
 $ g++ -std=c++11 main/main.cpp src/example.cpp -I. -o main.o
@@ -38,7 +40,8 @@ name : name
 value: 3
 ```
 
-テストプログラムのコンパイルと実行．
+テストプログラムのコンパイルと実行．    
+`make test` でもよい．
 
 ```
 $ g++ -std=c++11 test/gtest_example.cpp src/example.cpp -I. -Igoogletest-release-1.10.0/googletest/include -Lgoogletest-release-1.10.0/googletest/build/lib -lgtest -lgtest_main -lpthread -o test.o
