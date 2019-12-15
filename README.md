@@ -75,7 +75,8 @@ Running main() from /home/hiroshi/Documents/cpp/cpp_sample/googletest-release-1.
 ## Doxygenの生成
 
 以下のコマンドでhtmlファイルが生成できる．    
-`doxygen/html/index.html`をブラウザで開いて読める．
+`doxygen/html/index.html`をブラウザで開いて読める．    
+`make docs` でもよい．
 
 ```
 $ doxygen

@@ -22,6 +22,11 @@ TEST_LINKS = -lgtest -lgtest_main -lpthread
 MAIN_OBJ = main.o
 TEST_OBJ = test.o
 
+# doxygen
+DOXYGEN = doxygen
+BROWSER = firefox
+INDEXPATH = doxygen/html/index.html
+
 .PHONY: all clean main test
 
 all: $(MAIN_TARGET) $(TEST_TARGET)
@@ -34,4 +39,8 @@ $(TEST_TARGET): $(TESTS_SRCS)
 
 clean:
 	rm -f *.o
+
+docs:
+	$(DOXYGEN)
+	$(BROWSER) $(INDEXPATH) & 
 
