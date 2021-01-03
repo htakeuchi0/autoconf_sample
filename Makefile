@@ -1,6 +1,8 @@
 # compilers
 CXX = g++
-CXXFLAGS = -std=c++11 -g -Wall
+CXXFLAGS = -std=c++17 -g -Wall
+# デバッグ用
+# CXXFLAGS = -std=c++17 -g -Wall -fsanitize=address -fno-omit-frame-pointer
 MAIN_TARGET = build
 TEST_TARGET = test
 

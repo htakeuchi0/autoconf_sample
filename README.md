@@ -47,7 +47,7 @@ $ source makeenv.sh
 `make build` でもよい．
 
 ```
-$ g++ -std=c++11 main/main.cpp src/example.cpp -I. -o main.o
+$ g++ -std=c++17 main/main.cpp src/example.cpp -I. -o main.o
 $ ./main.o name 1 2
 name : name
 value: 3
@@ -57,7 +57,7 @@ value: 3
 `make test` でもよい．
 
 ```
-$ g++ -std=c++11 test/gtest_example.cpp src/example.cpp -I. -Igoogletest-release-1.10.0/googletest/include -Lgoogletest-release-1.10.0/googletest/build/lib -lgtest -lgtest_main -lpthread -o test.o
+$ g++ -std=c++17 test/gtest_example.cpp src/example.cpp -I. -Igoogletest-release-1.10.0/googletest/include -Lgoogletest-release-1.10.0/googletest/build/lib -lgtest -lgtest_main -lpthread -o test.o
 $ ./test.o
 Running main() from /home/hiroshi/Documents/cpp/cpp_sample/googletest-release-1.10.0/googletest/src/gtest_main.cc
 [==========] Running 1 test from 1 test suite.
