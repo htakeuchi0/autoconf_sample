@@ -22,9 +22,9 @@
    |  |- main.cc
    |
    |- scripts/               - 環境構築用スクリプト
-   |  |- install_doxygen.h
-   |  |- install_gtest.h
-   |  |- install_lcov.h
+   |  |- install_doxygen.sh
+   |  |- install_gtest.sh
+   |  |- install_lcov.sh
    |
    |- src                    - ソースファイル
    |  |- example.cc
@@ -61,7 +61,7 @@ $ make lib
 $ sudo make install
 ```
 
-別プロジェクトでこの共有ライブラリを使う場合は，`libsimplebf.so` をリンクして下さい (`-lsimplebf`)．
+別プロジェクトでこの共有ライブラリを使う場合は，`libcppenvsample.so` をリンクして下さい (`-lcppenvsample`)．
 
 ヘッダファイルと共有ライブラリをアンインストールする方法は以下のとおりです．
 
