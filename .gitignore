@@ -31,5 +31,10 @@
 *.out
 *.app
 
-# Doxygen
-doxygen/**
+# Others
+doxygen
+build
+lcov
+cpp_env_sample
+test_cpp_env_sample
+

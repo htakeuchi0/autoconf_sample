@@ -2,16 +2,13 @@
 
 ## 概要
 
-C++のサンプルプロジェクト．    
-Google Test の使用例を含む．
+本ソースセットは，C++のサンプルプロジェクトです．
 
-確認済みの動作環境は以下のとおりである．
-* OS: Linux (Ubuntu 18.04.3 LTS)
-* コンパイラ: g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+確認済みの動作環境は以下のとおりです．    
+* OS: Linux (Ubuntu 18.04.5 LTS)
+  * コンパイラ: g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 
 ## ディレクトリ構成
-
-`makeenv.sh`を実行する前のディレクトリ構成は以下の通り．
 
 ```
 |- cpp_sample/
@@ -19,42 +16,103 @@ Google Test の使用例を含む．
    |- Makefile               - makeファイル
    |- README.md              - 本ファイル
    |- include/               - ヘッダファイル
-   |  |- example.hpp
+   |  |- example.h
    |
    |- main/                  - メインファイル
-   |  |- main.cpp
+   |  |- main.cc
    |
    |- scripts/               - 環境構築用スクリプト
-   |  |- download_gtest.h
-   |  |- download_doxygen.h
+   |  |- install_doxygen.h
+   |  |- install_gtest.h
+   |  |- install_lcov.h
    |
    |- src                    - ソースファイル
-   |  |- example.cpp
+   |  |- example.cc
    |
    |- test/                  - テストファイル
-      |- gtest_example.cpp
+      |- gtest_example.cc
 ```
 
-## コンパイルと実行
+## 使い方
 
-メインプログラムのコンパイルと実行．    
+### サンプルコードの実行
+
+ソースコードをビルドしてサンプルコードを実行する方法は以下のとおりです．
+`make` は `make build` でも可能です．
 
 ```
-$ make run
+$ make
+$ ./cpp_env_sample
 ```
 
-テストプログラムのコンパイルと実行．    
+### 共有ライブラリのビルドとインストール
+
+ソースコードをビルドして共有ライブラリを生成する方法は以下のとおりです．
+
+```
+$ make lib
+```
+
+ヘッダファイルと共有ライブラリをインストールする方法は以下のとおりです．   
+`/usr/local/include/cpp_env_sample/` 以下にヘッダファイルが配置され，`/usr/local/lib/` 以下に共有ライブラリ `libcppenvsample.so`, `libcppenvsample.so.*` が配置されます．
+
+```
+$ make lib
+$ sudo make install
+```
+
+別プロジェクトでこの共有ライブラリを使う場合は，`libsimplebf.so` をリンクして下さい (`-lsimplebf`)．
+
+ヘッダファイルと共有ライブラリをアンインストールする方法は以下のとおりです．
+
+```
+$ sudo make uninstall
+```
+
+### テストコードの実行
+
+テストコードをビルドしてテストを実行する方法は以下のとおりです．    
+これを実行するには Google Test のインストールが必要です．
 
 ```
 $ make test
+$ ./test_cpp_env_sample
 ```
 
-## Doxygenの生成
+### テストコードとカバレッジツールの実行
 
-以下のコマンドでhtmlファイルが生成できる．    
-`doxygen/html/index.html`をブラウザで開いて読める．    
+テストコードをビルドしてテストを実行し，カバレッジ計測結果を出力する方法は以下のとおりです．    
+これを実行するには LCOV のインストールが必要です．
+
+```
+$ make lcov
+```
+
+結果はブラウザから確認できます．
+
+```
+$ firefox lcov/index.html &
+```
+
+### ドキュメントの生成
+
+ドキュメントを生成する方法は以下のとおりです．    
+これを実行するには doxygen のインストールが必要です．
 
 ```
 $ make docs
 ```
 
+結果はブラウザから確認できます．
+
+```
+$ firefox doxygen/html/index.html &
+```
+
+### 一括実行
+
+ソースコード，共有ライブラリ，テストコードをビルドし，カバレッジ計測結果とドキュメント生成まで行う方法は以下のとおりです．
+
+```
+$ make all
+```
