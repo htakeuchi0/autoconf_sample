@@ -11,7 +11,7 @@
 ## ディレクトリ構成
 
 ```
-|- cpp_sample/
+|- cpp_env_sample/
    |- Doxyfile               - doxygen設定ファイル
    |- Makefile               - makeファイル
    |- README.md              - 本ファイル
