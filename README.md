@@ -16,7 +16,8 @@
    |- Makefile               - makeファイル
    |- README.md              - 本ファイル
    |- include/               - ヘッダファイル
-   |  |- example.h
+   |  |- cpp_env_sample/
+   |     |- example.h
    |
    |- main/                  - メインファイル
    |  |- main.cc
@@ -26,7 +27,7 @@
    |  |- install_gtest.sh
    |  |- install_lcov.sh
    |
-   |- src                    - ソースファイル
+   |- src/                   - ソースファイル
    |  |- example.cc
    |
    |- test/                  - テストファイル
