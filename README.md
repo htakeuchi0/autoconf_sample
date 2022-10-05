@@ -13,6 +13,7 @@
 ```
 |- cpp_env_sample/
    |- Doxyfile               - doxygen設定ファイル
+   |- LICENSE                - ラインセンスファイル
    |- Makefile               - makeファイル
    |- README.md              - 本ファイル
    |- include/               - ヘッダファイル
