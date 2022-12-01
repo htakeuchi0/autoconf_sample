@@ -7,8 +7,8 @@ if [ $? -ne 0 ]; then
 		# CentOS
 		sudo dnf install perl -y
 		wget http://downloads.sourceforge.net/ltp/lcov-1.14-1.noarch.rpm
-		rpm -ivh lcov-1.14-1.noarch.rpm
-		rm lcov-1.14-1.noarch.rpm -y
+		sudo rpm -ivh lcov-1.14-1.noarch.rpm
+		rm lcov-1.14-1.noarch.rpm
 	elif [ -f "/etc/lsb-release" ]; then
 		grep -q 'DISTRIB_ID=Ubuntu' /etc/lsb-release
 		if [ $? = 0 ]; then
