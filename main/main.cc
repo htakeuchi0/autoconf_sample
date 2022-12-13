@@ -14,7 +14,7 @@
  */
 int main(int argc, char **argv) {
   if (argc < 3) {
-    std::cerr << "Usage: example <name> <value> <value2>\n";
+    std::cerr << "Usage: " << argv[0] << " <name> <value> <value2>\n";
     return 1;
   }
 
