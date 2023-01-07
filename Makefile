@@ -68,7 +68,7 @@ COVERAGE = coverage.info
 # doxygen
 DOXYGEN = doxygen
 DOCDIR = doxygen
-INDEXPATH = $(DOXYGEN)/html/index.html
+INDEXPATH = $(DOCDIR)/html/index.html
 
 .PHONY: all build install uninstall lib test gcov lcov docs clean 
 
